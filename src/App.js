@@ -1,26 +1,84 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CircularProgress } from "@material-ui/core";
+import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Wrapper from "./components/Wrapper";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
-function App() {
+const App = () => {
+  const ROUTES = [
+    {
+      path: "/",
+      component: <Home />,
+      isShowing: true,
+    },
+    {
+      path: "/about",
+      component: <About />,
+      isShowing: true,
+    },
+    {
+      path: "/contact",
+      component: <Contact />,
+      isShowing: true,
+    },
+    {
+      path: "/pricing",
+      component: <Pricing />,
+      isShowing: true,
+    },
+    {
+      path: "/privacy",
+      component: <Privacy />,
+      isShowing: true,
+    },
+    {
+      path: "/terms-and-conditions",
+      component: <Terms />,
+      isShowing: true,
+    },
+    {
+      path: "/refund-policy",
+      component: <RefundPolicy />,
+      isShowing: true,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Suspense
+        fallback={
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: 300,
+            }}
+          >
+            <CircularProgress />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          {ROUTES.map((item) => (
+            <Route
+              key={item.path}
+              path={item.path}
+              exact
+              element={item.component}
+            />
+          ))}
+        </Routes>
+      </Suspense>
+    </Wrapper>
   );
-}
+};
 
 export default App;
