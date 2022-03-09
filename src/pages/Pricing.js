@@ -52,6 +52,8 @@ const Pricing = () => {
               style={{ color: "#967444", fontWeight: 800, fontSize: 16 }}
             >
               BRONZE PLAN
+              <br />
+              (Rs. 100 each Semester per Student)
             </Typography>
             {PLANS.map((item, index) => (
               <div
@@ -132,6 +134,8 @@ const Pricing = () => {
               style={{ color: "grey", fontWeight: 800, fontSize: 16 }}
             >
               SILVER PLAN
+              <br />
+              (Rs. 20 per Month per Student)
             </Typography>
             {PLANS.map((item, index) => (
               <div
@@ -211,6 +215,8 @@ const Pricing = () => {
               style={{ color: "#FF8801", fontWeight: 800, fontSize: 16 }}
             >
               GOLD PLAN
+              <br />
+              (Rs. 30 per Month per Student)
             </Typography>
             {PLANS.map((item) => (
               <div
