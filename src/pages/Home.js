@@ -29,14 +29,36 @@ const Home = () => {
         <img
           alt="Colles"
           src="/erp.png"
-          style={{ width: 280, height: 280, marginTop: 80 }}
+          style={{ width: "100%", marginTop: 0 }}
         />
         <Typography
           align="center"
           style={{
-            marginTop: 40,
             color: getColor.primary,
-            fontSize: 40,
+            fontSize: 25,
+            fontFamily: "Century Gothic",
+            fontWeight: 600,
+            marginTop: 70,
+          }}
+        >
+          AND 30+ MORE FEATURES AVAILABLE
+        </Typography>
+        <Typography
+          align="center"
+          style={{
+            color: getColor.primary,
+            fontSize: 25,
+            fontFamily: "Century Gothic",
+            fontWeight: 600,
+          }}
+        >
+          AT
+        </Typography>
+        <Typography
+          align="center"
+          style={{
+            color: getColor.primary,
+            fontSize: 50,
             fontFamily: "Century Gothic",
             fontWeight: 600,
           }}
@@ -44,7 +66,7 @@ const Home = () => {
           COLLES
         </Typography>
         <Typography
-          variant="h2"
+          variant="h3"
           align="center"
           style={{
             marginTop: 10,
