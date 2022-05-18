@@ -16,6 +16,18 @@ const Home = () => {
       name: "Govt. Aizawl College",
       logo: "gac.png",
     },
+    {
+      name: "Govt. J. Buana College",
+      logo: "jbc.png",
+    },
+    {
+      name: "Govt. Johnson College",
+      logo: "gjc.png",
+    },
+    {
+      name: "Lunglei Govt. College",
+      logo: "lgc.png",
+    },
   ];
   return (
     <div>
