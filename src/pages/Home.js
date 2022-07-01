@@ -41,7 +41,7 @@ const Home = () => {
         <img
           alt="Colles"
           src="/erp.png"
-          style={{ width: "100%", marginTop: 0 }}
+          style={{ width: "70%", marginTop: 0 }}
         />
         <Typography
           align="center"
@@ -101,7 +101,7 @@ const Home = () => {
           fontWeight: 600,
         }}
       >
-        Our proudly clients
+        Our precious clients
       </Typography>
       <div
         style={{
@@ -162,6 +162,28 @@ const Home = () => {
           Make with love by Hereus
         </Typography>
       </Container>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: 20,
+        }}
+      >
+        <Typography style={{ fontSize: 16 }}>Follow Hereus on:</Typography>
+        <div style={{ display: "flex", marginTop: 10 }}>
+          <a
+            href="https://www.instagram.com/hereus.in/"
+            target={"_blank"}
+            style={{ marginRight: 12 }}
+          >
+            <img alt="Instagram" src="/ig.png" width="30" height="30" />
+          </a>
+          <a href="https://www.facebook.com/hereusmizo/" target={"_blank"}>
+            <img alt="Facebook" src="/fb.png" width="30" height="30" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
