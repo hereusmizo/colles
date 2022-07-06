@@ -1,6 +1,8 @@
 import { Button, Grid, Typography } from "@material-ui/core";
 import { Cancel, CheckCircle } from "@material-ui/icons";
+import axios from "axios";
 import React from "react";
+import getColor from "../components/getColor";
 
 const Pricing = () => {
   const PLANS = [
@@ -25,6 +27,44 @@ const Pricing = () => {
     "Extensions/Clubs Report",
     "Optimized Server",
   ];
+
+  const onPayment = async (amount) => {
+    try {
+      const response = await axios.post(
+        `https://gacapi.colles.in/api/payment/create-order`,
+        {
+          amount: amount,
+          payable_amount: amount,
+        }
+      );
+      const options = {
+        key: "rzp_live_DXN6oocJaiJeGA",
+        name: "Colles ERP",
+        currency: "INR",
+        description: "Colles ERP Price for 1 Semester",
+        image: "/logo512.png",
+        order_id: response.data.id,
+        handler: async (successResponse) => {},
+
+        method: {
+          emi: false,
+        },
+        theme: {
+          color: getColor.primary,
+        },
+        modal: {
+          ondismiss: () => {},
+        },
+      };
+
+      const Razorpay = new window.Razorpay(options);
+      Razorpay.on("payment.failed", function (response) {});
+
+      return Razorpay.open();
+    } catch (error) {
+      alert("Something went wrong on the server! Please try again later.");
+    }
+  };
   return (
     <div>
       <Typography variant="h4" style={{ fontWeight: "600" }} align="center">
@@ -102,6 +142,7 @@ const Pricing = () => {
               }}
             >
               <Button
+                onClick={() => onPayment(100)}
                 color="primary"
                 fullWidth
                 variant="contained"
@@ -183,6 +224,7 @@ const Pricing = () => {
               }}
             >
               <Button
+                onClick={() => onPayment(240)}
                 color="primary"
                 fullWidth
                 variant="contained"
@@ -256,6 +298,7 @@ const Pricing = () => {
               }}
             >
               <Button
+                onClick={() => onPayment(360)}
                 color="primary"
                 fullWidth
                 variant="contained"
