@@ -97,7 +97,7 @@ const Privacy = () => {
         SECTION 4 - PAYMENT
       </Typography>
       <Typography style={{ textAlign: "justify", fontSize: 16, marginTop: 10 }}>
-        We use Razorpay for processing payments. We/Razorpay do not store your
+        We use Cashfree for processing payments. We/Cashfree do not store your
         card data on their servers. The data is encrypted through the Payment
         Card Industry Data Security Standard (PCI-DSS) when processing payment.
         Your purchase transaction data is only used as long as is necessary to
@@ -115,13 +115,13 @@ const Privacy = () => {
       </Typography>
       <Typography style={{ textAlign: "justify", fontSize: 16, marginTop: 10 }}>
         For more insight, you may also want to read terms and conditions of
-        razorpay on{" "}
+        cashfree on{" "}
         <a
-          href="https://razorpay.com"
+          href="https://cashfree.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://razorpay.com
+          https://cashfree.com
         </a>
       </Typography>
       <Typography
