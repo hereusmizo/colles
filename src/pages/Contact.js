@@ -85,7 +85,7 @@ const Contact = () => {
               <Email />
               &nbsp;&nbsp;&nbsp;
               <span style={{ fontSize: 17, fontWeight: 500 }}>
-                College Email
+                Colles Email
               </span>
             </div>
             <Typography style={{ fontSize: 17 }}>{project.email}</Typography>
@@ -103,7 +103,9 @@ const Contact = () => {
                 Email for Developers
               </span>
             </div>
-            <Typography style={{ fontSize: 17 }}>devus@hereus.in</Typography>
+            <Typography style={{ fontSize: 17 }}>
+              hereusmizo@gmail.com
+            </Typography>
           </Card>
         </Grid>
         <Grid
