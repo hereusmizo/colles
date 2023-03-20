@@ -28,7 +28,7 @@ const Pricing = () => {
     "Optimized Server",
   ];
 
-  const onPayment = async (amount) => {
+  const onPaymentRazorpay = async (amount) => {
     try {
       const response = await axios.post(
         `https://gacapi.colles.in/api/payment/create-order`,
@@ -62,6 +62,33 @@ const Pricing = () => {
 
       return Razorpay.open();
     } catch (error) {
+      alert("Something went wrong on the server! Please try again later.");
+    }
+  };
+  const onPaymentCashfree = async (amount) => {
+    try {
+      const orderResponse = await axios.post(
+        "http://localhost:4000/api/order",
+        {
+          amount: amount,
+        }
+      );
+      const orderData = await orderResponse.data;
+      const cashfree = new window.Cashfree();
+      await cashfree
+        .checkout({
+          mode: "sandbox",
+          paymentSessionId: orderData.payment_session_id,
+          returnUrl: "https://colles.in/pricing",
+        })
+        .then((result) => {
+          console.log(result);
+          if (result.error) {
+            console.log(result.error);
+          }
+        });
+    } catch (error) {
+      console.log(error);
       alert("Something went wrong on the server! Please try again later.");
     }
   };
@@ -142,7 +169,7 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPayment(100)}
+                onClick={() => onPaymentCashfree(100)}
                 color="primary"
                 fullWidth
                 variant="contained"
@@ -224,7 +251,7 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPayment(240)}
+                onClick={() => onPaymentCashfree(240)}
                 color="primary"
                 fullWidth
                 variant="contained"
@@ -298,7 +325,7 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPayment(360)}
+                onClick={() => onPaymentCashfree(360)}
                 color="primary"
                 fullWidth
                 variant="contained"
