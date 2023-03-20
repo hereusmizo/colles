@@ -68,7 +68,7 @@ const Pricing = () => {
   const onPaymentCashfree = async (amount) => {
     try {
       const orderResponse = await axios.post(
-        "http://localhost:4000/api/order",
+        "https://gjbcapi.colles.in/api/test/order",
         {
           amount: amount,
         }
