@@ -31,7 +31,7 @@ const Pricing = () => {
   const onPaymentRazorpay = async (amount) => {
     try {
       const response = await axios.post(
-        `https://gacapi.colles.in/api/payment/create-order`,
+        `https//gacapi.colles.in/api/payment/create-order`,
         {
           amount: amount,
           payable_amount: amount,
@@ -68,7 +68,7 @@ const Pricing = () => {
   const onPaymentCashfree = async (amount) => {
     try {
       const orderResponse = await axios.post(
-        "https://gjbcapi.colles.in/api/test/order",
+        "https://jbcapi.colles.in/api/test/order",
         {
           amount: amount,
         }
