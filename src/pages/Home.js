@@ -28,6 +28,14 @@ const Home = () => {
       name: "Lunglei Govt. College",
       logo: "lgc.png",
     },
+    {
+      name: "Govt. Hrangbana College",
+      logo: "hbc.png",
+    },
+    {
+      name: "Govt. Aizawl North College",
+      logo: "ganc.png",
+    },
   ];
   return (
     <div>
