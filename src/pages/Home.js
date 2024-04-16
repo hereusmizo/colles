@@ -60,7 +60,7 @@ const Home = () => {
           style={{
             color: getColor.primary,
             fontSize: 25,
-            fontFamily: "Century Gothic",
+            fontFamily: "century-gothic",
             fontWeight: 600,
             marginTop: 70,
           }}
@@ -72,7 +72,7 @@ const Home = () => {
           style={{
             color: getColor.primary,
             fontSize: 25,
-            fontFamily: "Century Gothic",
+            fontFamily: "century-gothic",
             fontWeight: 600,
           }}
         >
@@ -83,7 +83,7 @@ const Home = () => {
           style={{
             color: getColor.primary,
             fontSize: 50,
-            fontFamily: "Century Gothic",
+            fontFamily: "century-gothic",
             fontWeight: 600,
           }}
         >
@@ -95,7 +95,7 @@ const Home = () => {
           style={{
             marginTop: 10,
             color: getColor.primary,
-            fontFamily: "Century Gothic",
+            fontFamily: "century-gothic",
             fontWeight: 600,
           }}
         >
@@ -109,7 +109,7 @@ const Home = () => {
         style={{
           marginTop: 80,
           color: getColor.primary,
-          fontFamily: "Century Gothic",
+          fontFamily: "century-gothic",
           fontWeight: 600,
         }}
       >
@@ -163,7 +163,7 @@ const Home = () => {
       >
         <Typography
           style={{
-            fontFamily: "Century Gothic",
+            fontFamily: "century-gothic",
             fontSize: 20,
           }}
           align="center"
