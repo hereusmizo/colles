@@ -71,9 +71,7 @@ const Contact = () => {
               &nbsp;&nbsp;&nbsp;
               <span style={{ fontSize: 17, fontWeight: 500 }}>Phone</span>
             </div>
-            <Typography style={{ fontSize: 17 }}>
-              +91 {project.contact}
-            </Typography>
+            <Typography style={{ fontSize: 17 }}>{project.contact}</Typography>
             <div
               style={{
                 display: "flex",
