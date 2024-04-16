@@ -36,6 +36,10 @@ const Home = () => {
       name: "Govt. Aizawl North College",
       logo: "ganc.png",
     },
+    {
+      name: "Institute of Advanced Studies in Education",
+      logo: "iase.png",
+    },
   ];
   return (
     <div>
