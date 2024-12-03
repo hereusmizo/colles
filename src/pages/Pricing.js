@@ -169,13 +169,14 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPaymentCashfree(100)}
+                component={Link}
+                to="/contact"
                 color="primary"
                 fullWidth
                 variant="contained"
                 style={{
                   textTransform: "none",
-                  background: "#967444",
+                  background: "#FF8801",
                   color: "white",
                   borderRadius: 20,
                   marginTop: 10,
@@ -183,7 +184,7 @@ const Pricing = () => {
                   marginRight: 10,
                 }}
               >
-                Buy
+                Contact Us
               </Button>
             </div>
           </div>
@@ -251,13 +252,14 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPaymentCashfree(240)}
+                component={Link}
+                to="/contact"
                 color="primary"
                 fullWidth
                 variant="contained"
                 style={{
                   textTransform: "none",
-                  background: "grey",
+                  background: "#FF8801",
                   color: "white",
                   borderRadius: 20,
                   marginTop: 10,
@@ -265,7 +267,7 @@ const Pricing = () => {
                   marginRight: 10,
                 }}
               >
-                Buy
+                Contact Us
               </Button>
             </div>
           </div>
