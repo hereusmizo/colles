@@ -40,6 +40,10 @@ const Home = () => {
       name: "Institute of Advanced Studies in Education",
       logo: "iase.png",
     },
+    {
+      name: "District Institute of Education and Training, Aizawl",
+      logo: "dietaizawl.png",
+    },
   ];
   return (
     <div>

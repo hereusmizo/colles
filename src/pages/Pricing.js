@@ -3,7 +3,7 @@ import { Cancel, CheckCircle } from "@material-ui/icons";
 import axios from "axios";
 import React from "react";
 import getColor from "../components/getColor";
-
+import { Link } from "react-router-dom";
 const Pricing = () => {
   const PLANS = [
     "ERP System",
@@ -325,7 +325,8 @@ const Pricing = () => {
               }}
             >
               <Button
-                onClick={() => onPaymentCashfree(360)}
+                component={Link}
+                to="/contact"
                 color="primary"
                 fullWidth
                 variant="contained"
@@ -339,7 +340,7 @@ const Pricing = () => {
                   marginRight: 10,
                 }}
               >
-                Buy
+                Contact Us
               </Button>
             </div>
           </div>
